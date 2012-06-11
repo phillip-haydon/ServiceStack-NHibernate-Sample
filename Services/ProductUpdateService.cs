@@ -24,7 +24,7 @@ namespace Services
             using (var tx = session.BeginTransaction())
             {
                 var existing = session.Get<Product>(request.Id)
-                    .PopulateWith(request);
+                                      .PopulateWith(request);
 
                 tx.Commit();
             }
